@@ -1,154 +1,146 @@
+
 /*
-    Author: 
-    Course: 
-    Lesson: 
+Author: Kayleen Long
+Course: CIS133DA
+Section: 27531
+Lesson: 11
 */
+
+/* General Page Styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+    background-color: #f4f4f4;
+    color: #333333;
     margin: 0;
-}
-
-#wrapper {
-    background-color: #ddd;
-    margin-top: 50px;
+    padding: 0;
+    line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background: black url(../images/background.jpg) no-repeat center;
-    background-size: cover;
+    background-color: #17365d;
     color: white;
-    margin: 0;
-}
-
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding: 25px;
+}
+
+header h1 {
     margin: 0;
 }
 
-/* Navigation Bar Styles */
-
-nav ul {
-    list-style-type: none;
-    background-color: #2d3437;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    float: left;
+/* Navigation Styles */
+nav {
+    background-color: #333333;
+    padding: 12px;
+    text-align: center;
 }
 
 nav a {
-    display: block;
     color: white;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px 15px;
+    display: inline-block;
 }
 
 nav a:hover {
-    background-color: #135367;
-    color: #ffffff;
+    background-color: #555555;
 }
 
-nav .right {
-    background-color: #E1693D;
-    color: #000000;
-    float: right;
-}
-
-nav .active {
-    background-color: #135367;
-    color: #000000
-}
-
-nav {
-    top: 0;
-    position: absolute;
-    width: 100%;
-}
-
-/* Main Styles */
+/* Main Content Styles */
 main {
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
-    width: 900px;
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
+    background-color: white;
 }
 
-/*Table Styles **/
+h2 {
+    color: #17365d;
+}
 
+/* Table Styles */
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
 }
 
 th, td {
-    border: #000000 thin solid;
-    background-color: #ffffff;
-    padding: 5px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
 }
 
 th {
-    background-color: #135367;
-    color: #ffffff;
-    padding: 10px;
-    border-bottom: #000000 medium solid; /*Step #7*/
+    background-color: #17365d;
+    color: white;
 }
 
-.left_label {
-    border-right: #000000 medium solid; /*Step #8 - need to apply class to labels*/
-}
-
-/*Form Styles */
-
+/* Form Styles */
 form {
-    border: medium solid #2d3437;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    padding: 5px;
+input, textarea {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
 }
 
-.widefield {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-textarea {
-    width: 100%;
-    height: 200px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
 }
 
 button {
-    margin: 10px 5px;
-    padding: 5px 10px;
+    background-color: #17365d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
 }
 
 button:hover {
-    background: #135367;
-    color: white;
+    background-color: #315b8a;
+}
+
+/* Lesson 11 Reset Message Styles */
+#resetMessage {
+    visibility: hidden;
+    font-weight: bold;
+    color: red;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #2d3437;
+    background-color: #333333;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-footer a {
-    color: white;
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    nav a {
+        display: block;
+    }
 }
