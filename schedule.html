@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
     <!--
+
+        Author: Kayleen Long
 
         Course: CIS133DA
 
@@ -14,15 +16,17 @@
 
     -->
 
-    <title>Schedule an Appointment</title>
+    <title>Computer Systems Inc. - Service Schedule</title>
 
     <meta charset="UTF-8">
 
     <meta name="author" content="Kayleen Long">
 
-    <meta name="description" content="View computer services and pricing and request an appointment with Computer Systems Inc.">
+    <meta name="description" content="Computer Systems Inc. services, pricing, and appointment request form">
 
-    <meta name="keywords" content="computer repair, appointment, pricing, data recovery, software installation, network setup, business services">
+    <meta name="keywords" content="computer services, technology, business, appointments">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/default_style.css">
 
@@ -30,217 +34,207 @@
 
 <body>
 
-    <header>
+<header>
 
-        <h1>Computer Systems Inc.</h1>
+    <h1>Computer Systems Inc.</h1>
 
-        <nav>
+    <p>Your technology solutions provider</p>
 
-            <ul>
+</header>
 
-                <li><a href="#">Home</a></li>
+<nav>
 
-                <li><a href="about.html">About</a></li>
+    <a href="index.html">Home</a>
 
-                <li class="right"><a href="schedule.html" class="active">Book an Appointment</a></li>
+    <a href="services.html">Services</a>
 
-                <li><a href="#">Services</a></li>
+    <a href="schedule.html">Schedule an Appointment</a>
 
-            </ul>
+</nav>
 
-        </nav>
+<main>
 
-    </header>
+    <h2>Our Services and Pricing</h2>
 
-    <main>
+    <p>Computer Systems Inc. offers technology services for individuals and businesses.</p>
 
-        <h2>Pricing List</h2>
+    <table>
 
-        <table>
+        <caption>Computer Systems Inc. Service Pricing</caption>
+
+        <thead>
 
             <tr>
 
-                <th>User Type</th>
+                <th>Service</th>
 
-                <th>Services</th>
+                <th>Individual Price</th>
 
-                <th>Price</th>
+                <th>Business Price</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Computer Repair</td>
+
+                <td>$75</td>
+
+                <td>$100</td>
 
             </tr>
 
             <tr>
 
-                <th rowspan="7">Home &amp; Business</th>
+                <td>Virus Removal</td>
 
-                <td>Data recovery &amp; transfer</td>
+                <td>$50</td>
 
-                <td>$40 fixed price</td>
-
-            </tr>
-
-            <tr>
-
-                <td>Software installation</td>
-
-                <td>$40 fixed price</td>
+                <td>$75</td>
 
             </tr>
 
             <tr>
 
-                <td>Computer repair</td>
+                <td>Software Installation</td>
 
-                <td>$60 per hour + hardware costs</td>
+                <td>$40</td>
 
-            </tr>
-
-            <tr>
-
-                <td>PC setup and connection</td>
-
-                <td>$60 per hour + hardware costs</td>
+                <td>$60</td>
 
             </tr>
 
             <tr>
 
-                <td>Computer diagnosis</td>
+                <td>Data Recovery</td>
 
-                <td>$60 per hour</td>
+                <td>$90</td>
 
-            </tr>
-
-            <tr>
-
-                <td>Wireless/Wired network setup</td>
-
-                <td>$60 per hour</td>
+                <td>$125</td>
 
             </tr>
 
             <tr>
 
-                <td>Memory (RAM) upgrade</td>
+                <td>Network Setup</td>
 
-                <td>$90 fixed price</td>
+                <td>Not Available</td>
 
-            </tr>
-
-            <tr>
-
-                <th rowspan="3">Business</th>
-
-                <td>24/7 Support Hotline</td>
-
-                <td>Starting at $300 per month</td>
+                <td>$150</td>
 
             </tr>
 
             <tr>
 
-                <td>Web development</td>
+                <td>Server Maintenance</td>
 
-                <td>Starting at $400</td>
+                <td>Not Available</td>
+
+                <td>$200</td>
 
             </tr>
 
             <tr>
 
-                <td>Monthly software maintenance</td>
+                <td>Business IT Support</td>
 
-                <td>Starting at $40 per hour</td>
+                <td>Not Available</td>
+
+                <td>$175</td>
 
             </tr>
 
-        </table>
+        </tbody>
 
-        <h2>Project Request Form</h2>
+    </table>
 
-        <p>Computer Systems Inc. can email or call you today to schedule an appointment or project request. Submit the following form and we will get back to you promptly.</p>
+    <h2>Request an Appointment</h2>
 
-        <form action="postback.php" method="post" onsubmit="formSubmit()">
+    <p>Please complete the form below to tell us which services you are interested in.</p>
 
-            <label for="firstName">First Name</label>
+    <form action="postback.php" method="post">
 
-            <input type="text" id="firstName" name="firstName">
+        <label for="firstName">First Name:</label>
 
-            <label for="lastName">Last Name</label>
+        <input type="text" id="firstName" name="firstName" required>
 
-            <input type="text" id="lastName" name="lastName">
+        <label for="lastName">Last Name:</label>
 
-            <label for="email">Email</label>
+        <input type="text" id="lastName" name="lastName" required>
 
-            <input type="email" id="email" name="email">
+        <label for="email">Email Address:</label>
 
-            <label for="phone">Phone</label>
+        <input type="email" id="email" name="email" required>
 
-            <input type="tel" id="phone" name="phone">
+        <label for="phone">Phone Number:</label>
 
-            <p>How would you prefer we get back to you?</p>
+        <input type="tel" id="phone" name="phone">
 
-            <label>
+        <p>Which services are you interested in?</p>
 
-                <input type="checkbox" name="contact[]" value="Phone">
+        <input type="checkbox" id="repair" name="services" value="Computer Repair">
 
-                Phone
+        <label for="repair">Computer Repair</label>
 
-            </label>
+        <input type="checkbox" id="virus" name="services" value="Virus Removal">
 
-            <label>
+        <label for="virus">Virus Removal</label>
 
-                <input type="checkbox" name="contact[]" value="Email">
+        <input type="checkbox" id="software" name="services" value="Software Installation">
 
-                Email
+        <label for="software">Software Installation</label>
 
-            </label>
+        <input type="checkbox" id="data" name="services" value="Data Recovery">
 
-            <p>Are you requesting for your home or business?</p>
+        <label for="data">Data Recovery</label>
 
-            <label>
+        <input type="checkbox" id="network" name="services" value="Network Setup">
 
-                <input type="radio" name="userType" value="Individual/Home">
+        <label for="network">Network Setup</label>
 
-                Individual/Home
+        <p>Are you requesting services as an individual or business?</p>
 
-            </label>
+        <input type="radio" id="individual" name="clientType" value="Individual" required>
 
-            <label>
+        <label for="individual">Individual</label>
 
-                <input type="radio" name="userType" value="Business">
+        <input type="radio" id="business" name="clientType" value="Business">
 
-                Business
+        <label for="business">Business</label>
 
-            </label>
+        <label for="comments">Additional Comments:</label>
 
-            <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
 
-            <textarea id="comments" name="comments"></textarea>
+        <button type="reset" onclick="formReset()">Reset Form</button>
 
-            <button type="reset" onclick="formReset()">Reset form</button>
+        <button type="submit" onclick="formSubmit()">Submit Form</button>
 
-            <button type="submit">Submit Form</button>
+    </form>
 
-        </form>
+    <p id="resetMessage">Your form has been reset.</p>
 
-        <p id="resetMessage">Your form has been reset.</p>
+</main>
 
-    </main>
+<footer>
 
-    <footer>
+    <p>
 
-        <p>
+        <small>Copyright by Kay2261076 &copy; 2026</small>
 
-            <small>Copyright by Kay2261076 &copy; 2026</small>
+        - Last Modified -
 
-            - Last Modified -
+        <span id="lastModified"></span>
 
-            <span id="lastModified"></span>
+    </p>
 
-        </p>
+</footer>
 
-    </footer>
-
-    <script src="scripts/javascript.js"></script>
+<script src="scripts/javascript.js"></script>
 
 </body>
 
