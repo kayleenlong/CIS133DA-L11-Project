@@ -18,4 +18,3 @@ function formSubmit() {
 function formReset() {
     document.getElementById("resetMessage").style.visibility = "visible";
 }
-
